@@ -1,0 +1,6 @@
+flask
+flask_oidc
+requests
+urlopen
+requests_oauthlib
+cryptography

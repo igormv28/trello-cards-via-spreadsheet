@@ -1,0 +1,15 @@
+{
+	"web": {
+		"auth_uri": "https://authorize",
+		"token_uri": "https://token",
+		"token_introspection_uri": "https://introspect",
+		"issuer": "https://default",
+ 		"JWKS": [
+		"./jwks.json"
+	  ],
+ 		"redirect_uris": [ 
+	  "https://.com"
+		]
+	}
+  }
+  

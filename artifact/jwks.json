@@ -1,0 +1,28 @@
+{
+    "keys": [
+      {
+        "kty": "RSA",
+        "kid": "server",
+        "use": "sig",
+        "alg": "RS256",
+        "n": "",
+        "e": "",
+        "x5c": [
+          ""
+        ],
+        "x5t#S256": ""
+      },
+      {
+        "kty": "RSA",
+        "kid": "oidc-signing-cert",
+        "use": "sig",
+        "alg": "RS256",
+        "n": "",
+        "e": "",
+        "x5c": [
+          ""
+        ],
+        "x5t#S256": ""
+      }
+    ]
+  }

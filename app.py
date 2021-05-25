@@ -1,3 +1,4 @@
+# Developed by https://github.com/285187
 from flask import Flask, g, redirect, url_for, request, render_template, jsonify
 from flask_oidc import OpenIDConnect
 import json
@@ -19,16 +20,15 @@ def _force_https(wsgi_app):
 app = Flask(__name__)
 
 # Load system variables; manipulate wsgi session key
-with open('artifact/w3id_sso.json') as f:
-    w3id_sso_json = json.load(f)
+with open('artifact/sso.json') as f:
+    sso_json = json.load(f)
 
-w3id_sso_json["web"]["client_id"] = os.environ.get("OIDC_CLIENTID")
-w3id_sso_json["web"]["client_secret"] = os.environ.get("OIDC_CLIENTSECRET")
+sso_json["web"]["client_id"] = os.environ.get("OIDC_CLIENTID")
+sso_json["web"]["client_secret"] = os.environ.get("OIDC_CLIENTSECRET")
 OIDC_SECRETKEY = os.environ.get("OIDC_SECRETKEY")
 OIDC_SECRETKEY_VAL = str(OIDC_SECRETKEY).encode('ISO-8859-1').decode('unicode-escape')
-#print(json.dumps(w3id_sso_json, indent=4))
 with open('temp.json', 'w') as json_file:
-    json.dump(w3id_sso_json, json_file)
+    json.dump(sso_json, json_file)
 
 app.wsgi_app = _force_https(app.wsgi_app)
 app.config["OIDC_CLIENT_SECRETS"] = "temp.json"

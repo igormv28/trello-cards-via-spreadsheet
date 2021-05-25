@@ -1,3 +1,4 @@
+/* Developed by https://github.com/285187 */
 // init
 var label_columns = [];
 var label_rows = [];

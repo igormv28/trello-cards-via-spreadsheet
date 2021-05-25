@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-LABEL maintainer="https://www.gihut.com/imvieira" 
+LABEL maintainer="https://www.gihut.com/285187" 
 RUN apt-get update && \
     apt-get install -y python3-pip python3-dev && \
     cd /usr/local/bin && \

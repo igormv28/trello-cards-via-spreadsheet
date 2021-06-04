@@ -1,4 +1,4 @@
-# Developed by https://github.com/285187
+# Developed by https://github.com/igormv28
 from flask import Flask, g, redirect, url_for, request, render_template, jsonify
 from flask_oidc import OpenIDConnect
 import json
